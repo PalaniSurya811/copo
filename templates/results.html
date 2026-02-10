@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attainment Results Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}">
+
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>📊 Attainment Results Dashboard</h1>
+        <p>Comprehensive CO–PO / PSO Attainment Analysis</p>
+    </div>
+
+    <!-- KPI SECTION -->
+    <section class="kpi-section">
+        <div class="kpi-card">
+            <h3>Direct CO Attainment</h3>
+            <table>
+                <tr><th>CO</th><th>Level</th></tr>
+                {% for co, val in direct.items() %}
+                <tr><td>{{ co }}</td><td>{{ val }}</td></tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="kpi-card">
+            <h3>Indirect CO Attainment</h3>
+            <table>
+                <tr><th>CO</th><th>Level</th></tr>
+                {% for co, val in indirect.items() %}
+                <tr><td>{{ co }}</td><td>{{ val }}</td></tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="kpi-card">
+            <h3>Final CO Attainment</h3>
+            <table>
+                <tr><th>CO</th><th>Level</th></tr>
+                {% for co, val in final.items() %}
+                <tr><td>{{ co }}</td><td>{{ val }}</td></tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="kpi-card">
+            <h3>PO / PSO Attainment</h3>
+            <table>
+                <tr><th>PO</th><th>Level</th></tr>
+                {% for po, val in po.items() %}
+                <tr><td>{{ po }}</td><td>{{ val }}</td></tr>
+                {% endfor %}
+            </table>
+        </div>
+    </section>
+
+    <!-- GRAPH SECTION -->
+    <section class="graph-section">
+        <h2>📈 Attainment Visualizations</h2>
+
+        <div class="graph-grid">
+            <div class="graph-card"><img src="{{ url_for('static', filename='graphs/direct.png') }}"></div>
+            <div class="graph-card"><img src="{{ url_for('static', filename='graphs/indirect.png') }}"></div>
+
+            <div class="graph-card"><img src="{{ url_for('static', filename='graphs/compare.png') }}"></div>
+            <div class="graph-card"><img src="{{ url_for('static', filename='graphs/final.png') }}"></div>
+
+            <div class="graph-card"><img src="{{ url_for('static', filename='graphs/po.png') }}"></div>
+            <div class="graph-card full-width">
+                <img src="{{ url_for('static', filename='graphs/mapping.png') }}">
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2026 CO–PO Attainment System | Final Year Project
+    </footer>
+
+</div>
+
+</body>
+
+</html>

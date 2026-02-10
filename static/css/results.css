@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6fb;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    color: #2d3748;
+}
+
+.subtitle {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 35px;
+}
+
+/* ================= KPI TABLES (2 x 2) ================= */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    text-align: center;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #667eea;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+/* ================= GRAPH SECTION ================= */
+.section-title {
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+/* 2 graphs per row → 3 rows */
+.graph-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.graph-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+}
+
+.graph-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #777;
+    font-size: 13px;
+}
+
+/* ================= KPI TABLES (2 x 2) ================= */
+.kpi-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.kpi-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.kpi-card h3 {
+    text-align: center;
+    color: #4a5568;
+    margin-bottom: 15px;
+}
+
+/* ===== FULL WIDTH IMPORTANT GRAPH ===== */
+.graph-card.full-width {
+    grid-column: 1 / -1;
+}

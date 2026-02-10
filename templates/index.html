@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO–PO Attainment System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+
+<div class="glass-bg"></div>
+
+<div class="container">
+    <header>
+        <div class="logo-icon"><i class="fas fa-chart-line"></i></div>
+        <h1>CO–PO Analysis <span>System</span></h1>
+        <p class="subtitle">NBA / NAAC Outcome Based Education Automation</p>
+    </header>
+
+    <form action="/process" method="post" enctype="multipart/form-data" target="_blank">
+        
+        <div class="upload-section">
+            <div class="upload-group">
+                <label><i class="fas fa-file-invoice"></i> Direct CO Attainment</label>
+                <div class="file-input-wrapper">
+                    <input type="file" name="co_marks" id="co_marks" required>
+                    <span class="file-custom">Internal + External Marks</span>
+                </div>
+            </div>
+
+            <div class="upload-group">
+                <label><i class="fas fa-poll"></i> Indirect Assessment</label>
+                <div class="file-input-wrapper">
+                    <input type="file" name="indirect" id="indirect" required>
+                    <span class="file-custom">Course Exit Survey</span>
+                </div>
+            </div>
+
+            <div class="upload-group">
+                <label><i class="fas fa-map-marked-alt"></i> CO–PO Mapping</label>
+                <div class="file-input-wrapper">
+                    <input type="file" name="mapping" id="mapping" required>
+                    <span class="file-custom">Excel/CSV Mapping File</span>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn-primary">
+            <span>Generate Dashboard</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </form>
+
+    <footer class="footer">
+        <p>© 2026 OBE Analytics Tool | Final Year Project</p>
+    </footer>
+</div>
+
+</body>
+</html>
